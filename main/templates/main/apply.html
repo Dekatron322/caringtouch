@@ -1,0 +1,284 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+
+         <!-- page-title -->
+        <div class="ttm-page-title-row">
+            <div class="ttm-page-title-row-inner">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-12">
+                            <div class="page-title-heading">
+                                <h2 class="title">Apply</h2>
+                            </div>
+                            <div class="breadcrumb-wrapper">
+                                <div class="container">
+                                    <div class="breadcrumb-wrapper-inner">
+                                        <span><a title="Dezily" href="index.html" class="home">Home</a></span>
+                                        <span class="ttm-bread-sep">&nbsp; / &nbsp;</span>
+                                        <span>Apply</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>                    
+        </div><!-- page-title-end -->
+
+        <!--site-main start-->
+        <div class="site-main">
+
+        	<!-- contact-form-section -->
+        	<section class="ttm-row contact-form-section ttm-bgcolor-grey clearfix">
+        		<div class="container">
+        			<div class="row">
+        				<div class="col-lg-6 m-auto">
+        					<!-- section title -->
+        					<div class="section-title title-style-center_text">
+                                <div class="title-header">
+                                    <h3>Send Message</h3>
+                                    <h2 class="title">Drop Your Links To Our Experts</h2>
+                                </div>
+                            </div><!-- section title end -->
+        				</div>
+        			</div>
+        			<div class="row pt-20 res-991-pt-10">
+        				<div class="col-lg-8">
+        					<div class="ttm-bgcolor-white spacing-15">
+        						<form id="contact_form" enctype="multipart/form-data" class="contact_form wrap-form clearfix" method="post" >
+                                    {% csrf_token %}
+                                    <div class="row ttm-boxes-spacing-20px">
+                                        <div class="col-md-6">
+                                            <label>
+                                                <span class="text-input"><input name="name" type="text"  placeholder="Your Name*" required="required"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>
+                                                <span class="text-input"><input name="email" type="text"  placeholder="Your Email*" required="required"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>
+                                                <span class="text-input"><input name="phone" type="text"  placeholder="Phone Number*" required="required"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>
+                                                <span class="text-input"><input name="address" type="text"  placeholder="Subject*" required="required"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>
+                                                <span class="text-input"><input name="position" type="text"  placeholder="Position" required="required"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>
+                                                <span class="text-input"><input name="qualification" type="text"  placeholder="qualification" required="required"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>
+                                                <span class="text-input"><input name="cv" type="file"  placeholder="cv" required="required"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>
+                                                <span class="text-input"><input name="start_date" type="date"  placeholder="Start Date" required="required"></span>
+                                            </label>
+                                        </div>
+
+
+                                        
+                                        <div class="col-lg-12 mt_10">
+                                            <button class="submit ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-style-fill ttm-btn-color-skincolor" type="submit" tabindex="0">send now!</button>
+                                        </div>
+                                    </div>
+                                </form>
+        					</div>
+        				</div>
+        				<div class="col-lg-4 res-991-pt-50">
+        					<div class="ttm-bgcolor-white w-100 spacing-18">
+        						<div class="featured-icon-box icon-align-top-content style16">
+	                                <div class="featured-icon">
+                                        <div class="ttm-icon ttm-icon_element-size-lg ttm-icon_element-onlytxt ttm-icon_element-color-skincolor style2">
+                                            <i class="flaticon flaticon-support"></i>
+                                        </div>
+                                    </div>
+	                                <div class="featured-content pt-0">
+	                                	<div class="featured-title">
+	                                		<h3>Let’s Call or Email</h3>
+	                                	</div>
+                                        
+                                        <div class="featured-content">
+	                                    <div class="featured-desc">
+	                                        <span><a href="tel:07415211168">07-415-211-168</a></span>
+                                        
+	                                     </div>   
+	                                    </div>
+	                                </div>
+                            	</div>
+                                <div class="ttm-horizontal_sep style1"></div>
+                                <div class="featured-icon-box icon-align-top-content style16">
+                                    
+                                    <div class="featured-content">
+                                        
+                                        <div class="featured-desc">
+                                            <span><a href="tel:07415211170">07-415-211-170</a></span>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ttm-horizontal_sep style1"></div>
+                                <div class="featured-icon-box icon-align-top-content style16">
+                                    
+                                    <div class="featured-content">
+                                        
+                                        <div class="featured-desc">
+                                            <p>mariam@caringtouchhealthcare.co.uk</p>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ttm-horizontal_sep style1"></div>
+                            	<div class="featured-icon-box icon-align-top-content style16">
+	                                
+	                                <div class="featured-content">
+	                                	
+	                                    <div class="featured-desc">
+	                                        <p>mariam@caringtouchhealthcare.co.uk</p>
+	                                        
+	                                    </div>
+	                                </div>
+                            	</div>
+                                <div class="ttm-horizontal_sep style1"></div>
+                            	<div class="featured-icon-box icon-align-top-content style16">
+	                                
+	                                <div class="featured-content">
+	                                	
+	                                    <div class="featured-desc">
+                                            <p>ganiyat@caringtouchhealthcare.co.uk</p>
+                                            
+                                        </div>
+	                                </div>
+                            	</div>
+                                <div class="ttm-horizontal_sep style1"></div>
+                                <div class="featured-icon-box icon-align-top-content style16">
+                                    
+                                    <div class="featured-content">
+                                        
+                                        <div class="featured-desc">
+                                            <p>Abideen@caringtouchhealthcare.co.uk</p>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+
+        					</div>
+        				</div>
+        			</div>
+        		</div>
+        	</section>
+        	<!-- contact-form-section-end -->
+
+        	<!-- map-section -->
+        	<section class="ttm-row map-section clearfix">
+        		<div class="container">
+        			<div class="row">
+        				<div class="col-lg-4">
+        					<div class="addres-info ttm-bgcolor-skincolor">
+        						<ul class="ttm-list style2">
+        							<li>
+        								<h3>Call Us</h3>
+        								<p>07-415-211-168, 07-415-211-170</p>	
+        							</li>
+        							<li class="mt-15">
+        								<h3>Address</h3>
+        								<p>3 Newton St, Wrexham LL13 8PE, UK</p>
+        							</li>
+        						</ul>
+        						<div class="pt-20">
+        							<a href="contact-us-2.html" class="ttm-underline-strong">Get A Directions!</a>
+        						</div>
+        					</div>
+        				</div>
+        				<div class="col-lg-8">
+        					<div class="res-991-pt-30">
+        						<div id="google_map" class="google_map">
+					                <div class="map_container">
+					                    <div id="map">
+					                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2398.8753129516767!2d-2.9842349!3d53.0405782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487ac73d559028d7%3A0xdd02064088bf63d!2s3%20Newton%20St%2C%20Wrexham%20LL13%208PE%2C%20UK!5e0!3m2!1sen!2sng!4v1721464144021!5m2!1sen!2sng" height="365"></iframe>
+					                    </div>
+					                </div>
+					            </div>
+        					</div>
+        				</div>
+        			</div>
+        			
+        		</div>
+        	</section>
+        	<!-- map-section-end -->
+
+            <!-- health-cure-type-section -->
+            <!-- <div class="ttm-row zero_padding-section health-cure-type-section-3 ttm-bgcolor-grey clearfix">
+                <div class="container p-0">
+                    <div class="row position-relative">
+                        <div class="col-lg-12 col-md-12">
+                            <div class="client-logo-sec spacing-14">
+                            <div class="row slick_slider mx-0" data-slick='{"slidesToShow": 5, "slidesToScroll": 1, "arrows":false, "dots":false, "autoplay":true, "infinite":true, "responsive": [{"breakpoint":1100,"settings":{"slidesToShow": 3}} , {"breakpoint":768,"settings":{"slidesToShow": 3}}, {"breakpoint":575,"settings":{"slidesToShow": 2}}]}'>
+                                <div class="col-sm-4">
+                                    <div class="client-box">
+                                        <div class="client-thumbnail">
+                                            <img class="img-fluid m-auto" src="images/client/client-01.png" alt="image" width="163" height="60">
+                                        </div>
+                                    </div>                                                                          
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="client-box">
+                                        <div class="client-thumbnail">
+                                            <img class="img-fluid m-auto" src="images/client/client-02.png" alt="image" width="163" height="60">
+                                        </div>
+                                    </div>                                                                          
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="client-box">
+                                        <div class="client-thumbnail">
+                                            <img class="img-fluid m-auto" src="images/client/client-03.png" alt="image" width="163" height="60">
+                                        </div>
+                                    </div>                                                                          
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="client-box">
+                                        <div class="client-thumbnail">
+                                            <img class="img-fluid m-auto" src="images/client/client-04.png" alt="image" width="163" height="60">
+                                        </div>
+                                    </div>                                                                          
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="client-box">
+                                        <div class="client-thumbnail">
+                                            <img class="img-fluid m-auto" src="images/client/client-05.png" alt="image" width="163" height="60">
+                                        </div>
+                                    </div>                                                                          
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="client-box">
+                                        <div class="client-thumbnail">
+                                            <img class="img-fluid m-auto" src="images/client/client-06.png" alt="image" width="163" height="60">
+                                        </div>
+                                    </div>                                                                          
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ -->            <!-- health-cure-type-section-end -->
+            
+        </div>
+        <!--site-main end-->
+
+        {% endblock %}

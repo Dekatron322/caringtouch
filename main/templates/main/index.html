@@ -1,0 +1,706 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+
+
+        <!-- Banner -->
+        <div class="banner_slider banner_slider_2">
+
+            <div class="slide s1">
+                <div class="slide__content bg-img4 ttm-bgcolor-grey">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="slide__content--headings">
+                                        <h3 data-animation="fadeInDown" data-delay="0.6s" data-duration="0.8s"><i class="fa fa-heart" aria-hidden="true"></i>&nbsp; Caringtouch Healthcare Limited</h3>
+                                        <h2 class="title font-size-74 fontweight-Medium" data-animation="fadeInLeft" data-delay="0.7s" data-duration="0.5s">Your Well-Being</h2>
+                                        <h2 class="title font-size-74 fw-normal fontweight-Medium" data-animation="fadeInUp" data-delay="0.6" data-duration="0.8s"><span class="font-weight-normal font-size-44">Our </span><span class="font-weight-bold ttm-textcolor-skincolor">Commitment.</span></h2>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 align-self-end">
+                                <div class="pl-20 res-991-pl-0 pb-50 text-center text-lg-start">
+                                    <p data-animation="fadeInRight" data-delay="0.7s" data-duration="0.5s">We are a specialised recruitment and vetting team. We conduct several checks on all new applicants to ensure that Caringtouch Healthcare Limited only hires the very best. <br/> We also hire highly skilled nurses, social workers, care assistants, support workers and more to care facilities, hospitals and other healthcare clients.</p>
+                                    <a data-animation="fadeInRight" data-delay="0.7s" data-duration="0.5s" class="slide-btn ttm-btn btn-inline d-block ttm-btn-size-md ttm-icon-btn-right" href="{% url 'main:about' %}" tabindex="0">Learn More.<i class="icon-angle-circled-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide_img" style="background-image: url({% static 'assets/images/slides/slider-mainbg-03.png' %}); background-position: top center;"></div>
+            </div>
+            <div class="slide s2">
+                <div class="slide__content bg-img4 ttm-bgcolor-grey">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="slide__content--headings">
+                                        <h3 data-animation="fadeInDown" data-delay="0.6s" data-duration="0.8s"><i class="fa fa-heart" aria-hidden="true"></i>INTENSIVE WE CARE</h3>
+                                        <h2 class="title font-size-74 fontweight-Medium" data-animation="fadeInLeft" data-delay="0.7s" data-duration="0.5s">Trusted in-home   
+ </h2>
+                                        <h2 class="title font-size-74 fw-normal fontweight-Medium" data-animation="fadeInUp" data-delay="0.6" data-duration="0.8s"><span class="font-weight-normal font-size-44">care  </span><span class="font-weight-bold ttm-textcolor-skincolor">solutions.</span></h2>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 align-self-end">
+                                <div class="pl-20 res-991-pl-0 pb-50 text-center text-lg-start">
+                                    <p data-animation="fadeInRight" data-delay="0.7s" data-duration="0.5s">Caringtouch Healthcare Limited is a name families can trust to provide the best home care for their loved ones. We have been a leading elder care provider for years. Our professional and dedicated caregivers proudly help older adults live comfortably, independently, and safely in their own homes.</p>
+                                    <a data-animation="fadeInRight" data-delay="0.7s" data-duration="0.5s" class="slide-btn ttm-btn btn-inline d-block ttm-btn-size-md ttm-icon-btn-right" href="{% url 'main:about' %}" tabindex="0">Contact Us.<i class="icon-angle-circled-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide_img" style="background-image: url({% static 'assets/images/slides/slider-mainbg-04.png' %});"></div>
+            </div>
+
+        </div><!-- Banner end-->
+        {% if messages %}
+    {% for message in messages %}
+        <div class="col-xl-12 col-lg-12 col-md-12 mb-5 message-item" style="opacity: 0;">
+            <div class="twm-media">
+                <div class="twm-candidates-tag message-tag" id="message_{{ forloop.counter }}" style="background-color: #e0eeff; padding: 10px; border-radius: 4px; text-align: center">
+                    <span style="color: #24695c; text-align: center">{{ message }}</span>
+                </div>
+            </div>
+        </div>
+        <script>
+            setTimeout(function() {
+                var element = document.getElementById("message_{{ forloop.counter }}");
+                if (element) {
+                    element.classList.add('fade-out');
+                    setTimeout(function() {
+                        element.parentNode.removeChild(element);
+                    }, 500); // Change the time based on your desired fade-out duration
+                }
+            }, 5000);
+            setTimeout(function() {
+                var element = document.querySelector(".message-item");
+                if (element) {
+                    element.style.opacity = "1";
+                }
+            }, 500); // Time delay for the fade-in effect
+        </script>
+    {% endfor %}
+{% endif %}
+
+        <!--site-main start-->
+        <div class="site-main">
+
+            <!-- about-section-->
+            <section class="ttm-row about-section-2 clearfix">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="about-image-class ml-30 res-1199-ml-0">
+                                <div class="ttm_single_image-wrapper">
+                                    <img class="img-fluid mx-auto d-block" src="{% static 'assets/images/single-img-111.png' %}" alt="single-img-04" width="543" height="587">
+                                </div>
+                                <div class="about-section-fid style1 ttm-bgcolor-skincolor res-1199-mt-30">
+                                <!-- ttm-fid -->
+                                    <div class="ttm-fid inside ttm-fid-view-circle-progress ttm-fid-with-border">
+                                        <div class="ttm-fid-contents">
+                                            <div class="ttm-circle-box"
+
+                                                data-digit          = "80"
+                                                data-fill           = "#ffffff"
+                                                data-before         = ""
+                                                data-before-type    = "sup"
+                                                data-after          = "%"
+                                                data-after-type     = "span"
+                                                data-size           = "110"
+                                                data-emptyfill      = "#33d687"
+                                                data-thickness      = "5"
+                                                data-linecap        = "round"
+                                                data-gradient       = ""
+                                                >
+                                                <div class="ttm-circle-content">
+                                                    <div class="ttm-circle"></div>
+                                                    <div class="ttm-circle-boxcontent"><div class="ttm-fid-number"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="ttm-textcolor-white">Satisfied</p>
+                                            <h3 class="ttm-fid-title"><span class="ttm-textcolor-white">Happy Patients</span></h3>
+                                        </div>
+                                    </div><!-- ttm-fid end -->
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="text-left res-991-pt-50 res-991-pb-0 ">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <!--section-title -->
+                                        <div class="section-title">
+                                            <div class="title-header">
+                                                <h3>Caringtouch Healthcare Limited</h3>
+                                                <h2 class="title">Quality, Efficiency, and Person-Centered Service</h2>
+                                            </div>
+                                            <div class="featured-desc">
+                                                <p>Caringtouch Healthcare Limited stands for excellence in everything we do. From the dedicated professionals we hire to the comprehensive services we offer, no task is too small or too large. Our commitment is to ensure that every employee delivers the highest quality of service possible</p>
+                                            </div>
+                                        </div><!--section-title-end -->
+                                    </div>
+                                </div>
+                                <div class="row mt_5">
+                                    <div class="col-sm-6">
+                                        <div class="featured-icon-box icon-align-before-content style17">
+                                            <div class="featured-icon">
+                                                <div class="ttm-icon ttm-icon_element-size-md style1 ttm-icon_element-color-skincolor ttm-bgcolor-grey">
+                                                    <i class="flaticon flaticon-heart-beat"></i>
+                                                </div>
+                                            </div>
+                                            <div class="featured-content">
+                                                <div class="featured-title">
+                                                    <h3>Skilled Workers</h3>
+                                                </div>
+                                                <div class="featured-desc">
+                                                    <p>We have the best work to attend to your need</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="featured-icon-box icon-align-before-content style17">
+                                            <div class="featured-icon">
+                                                <div class="ttm-icon ttm-icon_element-size-md style1  ttm-icon_element-color-skincolor ttm-bgcolor-grey">
+                                                    <i class="flaticon flaticon-microsurgery"></i>
+                                                </div>
+                                            </div>
+                                            <div class="featured-content">
+                                                <div class="featured-title">
+                                                    <h3>Available 24/7</h3>
+                                                </div>
+                                                <div class="featured-desc">
+                                                    <p>We are available round the clock</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ttm-horizontal_sep mt-40 mb-30 res-991-mt-30"></div>
+                                <div class="position-relative">
+                                    <div class="row mt-22">
+                                                    <div class="col-md-6">
+                                                        <ul class="ttm-list ttm-list-style-icon style1">
+                                                            <li><i class="icon-ok"></i>
+                                                                <span class="ttm-list-li-content">Personal care</span>
+                                                            </li>
+                                                            <li><i class="icon-ok"></i>
+                                                                <span class="ttm-list-li-content">Memory care</span>
+                                                            </li>
+                                                            <li><i class="icon-ok"></i>
+                                                                <span class="ttm-list-li-content">Hospice support</span>
+                                                            </li>
+                                                            <li><i class="icon-ok"></i>
+                                                                <span class="ttm-list-li-content">Mobility assistance</span>
+                                                            </li>
+                                                            
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <ul class="ttm-list ttm-list-style-icon style1">
+                                                            <li><i class="icon-ok"></i>
+                                                                <span class="ttm-list-li-content">Meal prep</span>
+                                                            </li>
+                                                            <li><i class="icon-ok"></i>
+                                                                <span class="ttm-list-li-content">Transportation</span>
+                                                            </li>
+                                                            <li><i class="icon-ok"></i>
+                                                                <span class="ttm-list-li-content">Housekeeping</span>
+                                                            </li>
+                                                            <li><i class="icon-ok"></i>
+                                                                <span class="ttm-list-li-content">Medication reminders</span>
+                                                            </li>
+                                                            
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                </div>
+                                <div class="pt-38 d-flex flex-wrap flex-column flex-sm-row">
+                                    <div class="res-991-mb-15"><a class="ttm-btn ttm-btn-size-md ttm-btn-shape-squar ttm-btn-style-fill ttm-btn-color-darkgrey ttm-textcolor-white" href="{% url 'main:contact' %}">get appointment</a></div>
+                                    <div class="ml-15 res-575-ml-0"><a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-style-fill ttm-btn-color-skincolor" href="c{% url 'main:apply' %}">Apply for work</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- about-section-end-->
+
+            <!--welcome-section-->
+            <section class="ttm-row welcome-section-2 ttm-bgcolor-grey clearfix">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 m-auto">
+                            <!-- section title -->
+                            <div class="section-title title-style-center_text">
+                                <div class="title-header">
+                                    <h3>Caringtouch Healthcare Limited</h3>
+                                    <h2 class="title">Intensive we care</h2>
+                                </div>
+                            </div><!-- section title end -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="mb_15">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-6">
+                                        <!-- featured-imagebox -->
+                                        <div class="featured-imagebox featured-imagebox-services style1">
+                                            <!-- featured-thumbnail -->
+                                            <div class="featured-thumbnail">
+                                                <img width="540" height="320" class="img-fluid" src="{% static 'assets/images/services/service-01.jpg' %}" alt="image">
+                                            </div><!-- featured-thumbnail end-->
+                                            <!-- featured-content -->
+                                            <div class="featured-content">
+                                                <div class="featured-title">
+                                                    <h3><a href="{% url 'main:about' %}" tabindex="0">Our Goals</a></h3>
+                                                </div>
+                                                <div class="featured-desc">
+                                                    <p>To Give You Best Health </p>
+                                                </div>
+                                            </div><!-- featured-content-end -->
+                                            <div class="ttm-footer ttm-bgcolor-white">
+                                                <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-squar ttm-icon-btn-right w-100" href="{% url 'main:about' %}" tabindex="0">Learn More.<i class="icon-angle-circled-right"></i></a>
+                                            </div>
+                                        </div><!-- featured-imagebox-end -->
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                         <!-- featured-imagebox -->
+                                        <div class="featured-imagebox featured-imagebox-services style1">
+                                            <!-- featured-thumbnail -->
+                                            <div class="featured-thumbnail">
+                                                <img width="540" height="320" class="img-fluid" src="{% static 'assets/images/services/service-02.jpg' %}" alt="image">
+                                            </div><!-- featured-thumbnail end-->
+                                            <!-- featured-content -->
+                                            <div class="featured-content">
+                                                <div class="featured-title">
+                                                    <h3><a href="{% url 'main:about' %}" tabindex="0">Our Vision</a></h3>
+                                                </div>
+                                                <div class="featured-desc">
+                                                    <p>Trust us For Your Loved Ones </p>
+                                                </div>
+                                            </div><!-- featured-content-end -->
+                                            <div class="ttm-footer ttm-bgcolor-white">
+                                                <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-squar ttm-icon-btn-right w-100" href="{% url 'main:about' %}" tabindex="0">Learn More.<i class="icon-angle-circled-right"></i></a>
+                                            </div>
+                                        </div><!-- featured-imagebox-end -->
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <!-- featured-imagebox -->
+                                        <div class="featured-imagebox featured-imagebox-services style1">
+                                            <!-- featured-thumbnail -->
+                                            <div class="featured-thumbnail">
+                                                <img width="540" height="320" class="img-fluid" src="{% static 'assets/images/services/service-03.jpg' %}" alt="image">
+                                            </div><!-- featured-thumbnail end-->
+                                            <!-- featured-content -->
+                                            <div class="featured-content">
+                                                <div class="featured-title">
+                                                    <h3><a href="{% url 'main:about' %}" tabindex="0">Our Mission</a></h3>
+                                                </div>
+                                                <div class="featured-desc">
+                                                   <p>Providing the Best Care</p>
+                                                </div>
+                                            </div><!-- featured-content-end -->
+                                            <div class="ttm-footer ttm-bgcolor-white">
+                                                <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-squar ttm-icon-btn-right w-100" href="{% url 'main:about' %}" tabindex="0">Learn More.<i class="icon-angle-circled-right"></i></a>
+                                            </div>
+                                        </div><!-- featured-imagebox-end -->
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--welcome-section end-->
+
+            <!-- portfolio-section-->
+            <section class="ttm-row portfolio-experience-section-2 ttm-bgcolor-darkgrey bg-img5 clearfix">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <!--section-title -->
+                                    <div class="section-title text-center text-lg-start">
+                                        <div class="title-header">
+                                            <h3>WHAT WE DO</h3>
+                                            <h2 class="title ttm-textcolor-white">The right solution mix for your needs</h2>
+                                        </div>
+                                    </div><!--section-title-end -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <p>In close collaboration with our clients, we conduct random investigations our employees on a regular basis to ensure that they continue to fulfil the standards we demand. <a class="slide-btn ttm-btn btn-inline ttm-btn-size-md ttm-icon-btn-right ttm-btn-color-white" href="{% url 'main:services' %}">View More Information<i class="icon-angle-circled-right ttm-textcolor-skincolor"></i></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid p-0">
+                    <div class="row g-0 slick_slider slick-arrows-style1 pt-10 res-991-pt-0" data-slick='{"slidesToShow": 3, "slidesToScroll": 1, "arrows":true, "dots":false, "autoplay":false, "centerMode":true, "centerPadding":"262px", "infinite":true, "responsive":[
+                      {"breakpoint":1200,"settings":{"slidesToShow": 3, "centerPadding":"0px","centerMode":false}}, 
+                      {"breakpoint":1024,"settings":{"slidesToShow": 3, "centerPadding":"0px","centerMode":false}},
+                      {"breakpoint":991,"settings":{"slidesToShow": 2, "centerPadding":"0px","centerMode":false }},
+                      {"breakpoint":767,"settings":{"slidesToShow":2,"centerPadding":"0px","centerMode":false}},
+                      {"breakpoint":575,"settings":{"slidesToShow":1,"centerPadding":"0px","centerMode":false}},
+                      {"breakpoint":400,"settings":{"slidesToShow": 1,"centerPadding":"0px","centerMode":false}}  
+                      ]}'>
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <!-- featured-imagebox-portfolio -->
+                            <div class="featured-imagebox featured-imagebox-portfolio style1">
+                                <div class="ttm-portfolio-featured-wrapper">
+                                    <!-- ttm-box-view-overlay -->
+                                    <div class="ttm-box-view-overlay ttm-portfolio-box-view-overlay">
+                                        <!-- featured-thumbnail -->
+                                        <div class="featured-thumbnail">
+                                            <img class="img-fluid" src="{% static 'assets/images/portfolio/portfolio-01.jpg' %}" width="840" height="840" alt="image" >
+                                        </div><!-- featured-thumbnail end-->
+                                        <div class="ttm-media-link">
+                                            <a href="{% url 'main:services' %}" class="ttm_link"><i class="ti ti-plus"></i></a>
+                                        </div>
+                                    </div><!-- ttm-box-view-overlay end-->
+                                </div>
+                            </div><!-- featured-imagebox-portfolio -->
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <!-- featured-imagebox-portfolio -->
+                            <div class="featured-imagebox featured-imagebox-portfolio style1">
+                                <!-- ttm-box-view-overlay -->
+                                <div class="ttm-box-view-overlay ttm-portfolio-box-view-overlay">
+                                    <!-- featured-thumbnail -->
+                                    <div class="featured-thumbnail">
+                                        <img class="img-fluid" src="{% static 'assets/images/portfolio/portfolio-02.jpg' %}" alt="image" width="840" height="840">
+                                    </div><!-- featured-thumbnail end-->
+                                    <div class="ttm-media-link">
+                                        <a href="{% url 'main:services' %}" class="ttm_link"><i class="ti ti-plus"></i></a>
+                                    </div>
+                                </div><!-- ttm-box-view-overlay end-->
+                            </div><!-- featured-imagebox-portfolio -->
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <!-- featured-imagebox-portfolio -->
+                            <div class="featured-imagebox featured-imagebox-portfolio style1">
+                                <!-- ttm-box-view-overlay -->
+                                <div class="ttm-box-view-overlay ttm-portfolio-box-view-overlay">
+                                    <!-- featured-thumbnail -->
+                                    <div class="featured-thumbnail">
+                                        <img class="img-fluid" src="{% static 'assets/images/portfolio/portfolio-03.jpg' %}" alt="image" width="840" height="840">
+                                    </div><!-- featured-thumbnail end-->
+                                    <div class="ttm-media-link">
+                                        <a href="{% url 'main:services' %}" class="ttm_link"><i class="ti ti-plus"></i></a>
+                                    </div>
+                                </div><!-- ttm-box-view-overlay end-->
+                            </div><!-- featured-imagebox-portfolio -->
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <!-- featured-imagebox-portfolio -->
+                            <div class="featured-imagebox featured-imagebox-portfolio style1">
+                                <!-- ttm-box-view-overlay -->
+                                <div class="ttm-box-view-overlay ttm-portfolio-box-view-overlay">
+                                    <!-- featured-thumbnail -->
+                                    <div class="featured-thumbnail">
+                                        <img class="img-fluid" src="{% static 'assets/images/portfolio/portfolio-04.jpg' %}" alt="image" width="840" height="840">
+                                    </div><!-- featured-thumbnail end-->
+                                    <div class="ttm-media-link">
+                                        <a href="{% url 'main:services' %}" class="ttm_link"><i class="ti ti-plus"></i></a>
+                                    </div>
+                                </div><!-- ttm-box-view-overlay end-->
+                            </div><!-- featured-imagebox-portfolio -->
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <!-- featured-imagebox-portfolio -->
+                            <div class="featured-imagebox featured-imagebox-portfolio style1">
+                                <!-- ttm-box-view-overlay -->
+                                <div class="ttm-box-view-overlay ttm-portfolio-box-view-overlay">
+                                    <!-- featured-thumbnail -->
+                                    <div class="featured-thumbnail">
+                                        <img class="img-fluid" src="{% static 'assets/images/portfolio/portfolio-05.jpg' %}" alt="image" width="840" height="840">
+                                    </div><!-- featured-thumbnail end-->
+                                    <div class="ttm-media-link">
+                                        <a href="{% url 'main:services' %}" class="ttm_link"><i class="ti ti-plus"></i></a>
+                                    </div>
+                                </div><!-- ttm-box-view-overlay end-->
+                            </div><!-- featured-imagebox-portfolio -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- portfolio-section-end-->
+
+            <!--service-icon-section-->
+            <div class="ttm-row zero_padding-section achivement-section-2 spacing-8 position-relative z-index-2 clearfix">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="ttm-bg ttm-col-bgcolor-yes ttm-left-span ttm-bgcolor-skincolor clearfix">
+                                <div class="ttm-col-wrapper-bg-layer ttm-bg-layer mr_60"></div>
+                                <div class="layer-content">
+                                    <div class="res-991-pt-15 res-991-pb-15">
+                                        <div class="row">
+                                            <div class="col-lg-8">
+                                                <div class="featured-icon-box icon-align-before-content style2">
+                                                    <div class="featured-icon">
+                                                        <img class="img-fluid" src="{% static 'assets/images/icon-01.png' %}" width="75" height="85" alt="icon">
+                                                    </div>
+                                                    <div class="featured-content">
+                                                        <p>Our customer service is always available to assist you.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="spacing-1 d-xl-flex justify-content-xl-end align-items-center text-center">
+                                                    <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-squar ttm-btn-style-fill ttm-btn-color-darkgrey" href="{% url 'main:contact' %}" tabindex="0"> Let's Take Care of You  </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--service-icon-section end-->
+
+            <!-- procedure-section -->
+            <section class="ttm-row zero_padding-section procedure-section ttm-bgcolor-grey clearfix">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="ttm-bg ttm-col-bgcolor-yes pt-160 pb-75 res-991-pt-50 res-991-pb-35">
+                                <div class="ttm-col-wrapper-bg-layer ttm-bg-layer"></div>
+                                <div class="layer-content">
+                                    <div class="row">
+                                        <div class="col-lg-6 m-auto">
+                                            <!-- section title -->
+                                            <div class="section-title title-style-center_text">
+                                                <div class="title-header">
+                                                    <h3>WORKING PROCESS</h3>
+                                                    <h2 class="title">Trust us with Your Loved Ones</h2>
+                                                </div>
+                                            </div><!-- section title end -->
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="ttm-processbox-wrapper">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-6 col-sm-6">
+                                                        <div class="ttm-processbox">
+                                                            <div class="featured-content">
+                                                                <div class="featured-title">
+                                                                    <h3>Care Service</h3>
+                                                                    <p>First step of process</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="ttm-box-icon">
+                                                                <div class="ttm-process-icon">
+                                                                    <div class="ttm-icon ttm-icon_element-size-md style2 ttm-icon_element-color-skincolor ttm-bgcolor-grey">
+                                                                        <i class="flaticon flaticon-healthcare-2"></i>
+                                                                    </div>
+                                                                    <span class="number"></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="featured-content">
+                                                                <div class="featured-desc">
+                                                                    <p>Committed for providing quality treatment.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-6 col-sm-6">
+                                                        <div class="ttm-processbox">
+                                                            <div class="featured-content">
+                                                                <div class="featured-title">
+                                                                    <h3>Get Details</h3>
+                                                                    <p>Our second easy </p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="ttm-box-icon">
+                                                                <div class="ttm-process-icon">
+                                                                    <div class="ttm-icon ttm-icon_element-size-md style2 ttm-icon_element-color-skincolor ttm-bgcolor-grey">
+                                                                        <i class="flaticon flaticon-file"></i>
+                                                                    </div>
+                                                                    <span class="number"></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="featured-content">
+                                                                <div class="featured-desc">
+                                                                    <p>Contact us for to discuss what you need.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-6 col-sm-6">
+                                                        <div class="ttm-processbox">
+                                                            <div class="featured-content">
+                                                                <div class="featured-title">
+                                                                    <h3>Appointment</h3>
+                                                                    <p>Important third step</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="ttm-box-icon">
+                                                                <div class="ttm-process-icon">
+                                                                    <div class="ttm-icon ttm-icon_element-size-md style2 ttm-icon_element-color-skincolor ttm-bgcolor-grey">
+                                                                        <i class="flaticon flaticon-tick-mark"></i>
+                                                                    </div>
+                                                                    <span class="number"></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="featured-content">
+                                                                <div class="featured-desc">
+                                                                    <p>Regarding your care service issue book an appointment.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-6 col-sm-6">
+                                                        <div class="ttm-processbox">
+                                                            <div class="featured-content">
+                                                                <div class="featured-title">
+                                                                    <h3>Consult Us</h3>
+                                                                    <p>Solution in final step</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="ttm-box-icon">
+                                                                <div class="ttm-process-icon">
+                                                                    <div class="ttm-icon ttm-icon_element-size-md style2 ttm-icon_element-color-skincolor ttm-bgcolor-grey">
+                                                                        <i class="flaticon flaticon-doctor-1"></i>
+                                                                    </div>
+                                                                    <span class="number"></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="featured-content">
+                                                                <div class="featured-desc">
+                                                                    <p>Expertise treatments by our expert and be healthy.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- procedure-section-end -->
+
+            <!--testimonial-section-->
+            <section class="ttm-row testimonial-section-2 bg-img6 ttm-bg ttm-bgimage-yes clearfix">
+                <div class="ttm-bg-layer ttm-bgcolor-grey"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="row slick_slider g-0 double-slick-top" data-slick='{"slidesToShow": 1, "slidesToScroll": 1, "arrows":false, "dots":false, "autoplay":false, "infinite":true, "focusOnSelect":true, "asNavFor":".double-slick-bottom", "responsive": [{"breakpoint":1100,"settings":{"slidesToShow": 1}} , {"breakpoint":768,"settings":{"slidesToShow": 1}}, {"breakpoint":575,"settings":{"slidesToShow": 1}}]}'>
+                                <div class="testimonials style2">
+                                    <div class="testimonial-content">
+                                        <blockquote class="testimonial-text">“I had heart replacement with Dr. Sam. The surgery went smoothly. Fantastic post-care & a very good staff backing!. I am perfectly fit &amp; fine after surgeries. They knew exactly what I needed!!!!!!”
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <div class="testimonials style2">
+                                    <div class="testimonial-content">
+                                        <blockquote class="testimonial-text">“Knew exactly what I needed and was very reassuring. Fantastic post-care & a very good staff backing! Dezily’s care has been top-notch. I felt like I was going to be OK.”
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <div class="testimonials style2">
+                                    <div class="testimonial-content">
+                                        <blockquote class="testimonial-text">“Knew exactly what I needed and was very reassuring. Fantastic post-care & a very good staff backing! Medipluse’s care has been top-notch. It provides me a purpose during my treatment.”
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <div class="testimonials style2">
+                                    <div class="testimonial-content">
+                                        <blockquote class="testimonial-text">“Knew exactly what I needed and was very reassuring. Fantastic post-care & a very good staff backing! Dezily’s care has been top-notch. I felt like I was going to be OK.”
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="row">
+                                    <div class="col-lg-10 col-md-12 mx-auto">
+                                        <div class="row slick_slider double-slick-bottom" data-slick='{"slidesToShow": 3, "slidesToScroll": 1, "arrows":false, "dots":false, "autoplay":false, "centerPadding":"0px", "centerMode": true, "infinite":true, "focusOnSelect":true, "asNavFor":".double-slick-top" , "responsive": [{"breakpoint":1100,"settings":{"slidesToShow": 3}} , {"breakpoint":768,"settings":{"slidesToShow": 1}}, {"breakpoint":575,"settings":{"slidesToShow": 1}}]}'>
+                                            <div class="col-lg-4 col-md-4">
+                                                <div class="testimonials style2">
+                                                    <div class="testimonial-bottom ttm-bgcolor-grey">
+                                                        <div class="testimonial-avatar">
+                                                            <div class="testimonial-img">
+                                                                <img class="img-fluid" src="{% static 'assets/images/testimonial/05.png' %]" alt="testimonial-img" width="70" height="70">
+                                                            </div>
+                                                        </div>
+                                                        <div class="testimonial-caption">
+                                                            <h3>Alex Sam Martin</h3>
+                                                            <label>Head Dr. at Dezily</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4">
+                                                <div class="testimonials style2">
+                                                    <div class="testimonial-bottom ttm-bgcolor-grey">
+                                                        <div class="testimonial-avatar">
+                                                            <div class="testimonial-img">
+                                                                <img class="img-fluid" src="{% static 'assets/images/testimonial/06.png' %}" alt="testimonial-img" width="70" height="70">
+                                                            </div>
+                                                        </div>
+                                                        <div class="testimonial-caption">
+                                                            <h3>Andrew Allen</h3>
+                                                            <label>Senior Dr. at Dezily</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4">
+                                                <div class="testimonials style2">
+                                                    <div class="testimonial-bottom ttm-bgcolor-grey">
+                                                        <div class="testimonial-avatar">
+                                                            <div class="testimonial-img">
+                                                                <img class="img-fluid" src="{% static 'assets/images/testimonial/07.png' %}" alt="testimonial-img" width="70" height="70">
+                                                            </div>
+                                                        </div>
+                                                        <div class="testimonial-caption">
+                                                            <h3>Dr. Teresa Mayer</h3>
+                                                            <label>Senior Dr. at Dezily</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4">
+                                                <div class="testimonials style2">
+                                                    <div class="testimonial-bottom ttm-bgcolor-grey">
+                                                        <div class="testimonial-avatar">
+                                                            <div class="testimonial-img">
+                                                                <img class="img-fluid" src="{% static 'assets/images/testimonial/08.jpg' %}" alt="testimonial-img" width="70" height="70">
+                                                            </div>
+                                                        </div>
+                                                        <div class="testimonial-caption">
+                                                            <h3>Dr. Metthew Wood</h3>
+                                                            <label>Senior Dr. at Dezily</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--testimonial-section-end-->
+
+        </div>
+        <!--site-main end-->
+
+{% endblock %}
